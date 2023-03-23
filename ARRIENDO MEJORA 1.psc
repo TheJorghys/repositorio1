@@ -30,7 +30,7 @@ Algoritmo ARRIENDO
 				FinSi
 			FinSi
 		FinSi	
-	FinSi
+	FinSi 
 	
 	RL<-R_L (R_luz)
 	RG<-R_G (R_gas)
