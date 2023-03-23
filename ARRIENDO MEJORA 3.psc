@@ -5,78 +5,31 @@ Algoritmo ARRIENDO
 	definir R_agua Como Real
 	definir P_telefonia Como Real
 	Definir contrasena, ingreso_contrasena, recibo Como Cadena
-	Definir TotalPago Como Real
-    Definir NumTarjeta Como Entero
-    Definir CVV Como Entero
+	
 	
 	contrasena <- "12345"
 	
 	
 	Repetir
-		Escribir "Ingrese la contrase√±a para efectuar el pago : "
+		Escribir "Ingrese la contraseÒa para efectuar el pago : "
 		Leer contra
 		si contra=12345 Entonces
 			contra<-12345
 		SiNo
-			Escribir "Contrase√±a incorrecta. Vuelva a intentarlo."
+			Escribir "ContraseÒa incorrecta. Vuelva a intentarlo."
 		FinSi
 		
 	Hasta Que contra=12345
 	
 	Si contra=12345 Entonces
-		Escribir "Contrase√±a correcta. Ingresando al sistema..."
+		Escribir "ContraseÒa correcta. Ingresando al sistema..."
 		
 	Fin Si
-	Escribir "Ingrese el recibo que desea pagar: "
-    Escribir "1. Arriendo"
-    Escribir "2. Luz"
-    Escribir "3. Gas"
-    Escribir "4. Agua"
-    Escribir "5. Telefonia"
-    Leer opcion
-    
-	Si opcion = 1 Entonces
-        Escribir "Ingrese el valor del arriendo:"
-        Leer C_arriendo
-        TotalPago <- C_arriendo
-    Sino Si opcion = 2 Entonces
-			Escribir "Ingrese el valor de la luz:"
-			Leer R_luz
-			TotalPago <- R_luz
-		FinSi
-		
-		Si opcion = 3 Entonces
-			Escribir "Ingrese el valor del gas:"
-			Leer R_gas
-			TotalPago <- R_gas
-		FinSi
-		
-		Si opcion = 4 Entonces
-			Escribir "Ingrese el valor del agua:"
-			Leer R_agua
-			TotalPago <- R_agua
-		FinSi
-		
-		Si opcion = 5 Entonces
-			Escribir "Ingrese el valor de la telefonia:"
-			Leer P_telefonia
-			TotalPago <- P_telefonia
-		FinSi
-		
-		Escribir "Ingrese el n√∫mero de su tarjeta de d√©bito:"
-		Leer NumTarjeta
-		
-		Escribir "Ingrese el c√≥digo de seguridad (CVV):"
-		Leer CVV
-		
-		Escribir "Total a pagar: ", + TotalPago
-		Escribir "Pagado con √©xito con tarjeta de d√©bito ", + NumTarjeta
-	FinSi
 	
 	Escribir "Valor del arriendo es: "
 	leer C_arriendo
 	
-	Escribir  "¬øQu√© recibo desea pagar? luz, agua, gas, telefonia"
+	Escribir  "øQuÈ recibo desea pagar? luz, agua, gas, telefonia"
 	leer recibo
 	
 	si recibo es igual a "luz" entonces
@@ -103,30 +56,60 @@ Algoritmo ARRIENDO
 	RG<-R_G (R_gas)
 	RA<-R_A (R_agua)
 	PT<-P_T (P_telefonia)
-	
+	Repetir
+		Escribir "Desea pagar con Nequi? = SI"
+		Leer op
+		si op es igual a "SI" Entonces
+			Escribir "Digite numero de telefono para la consignacion:"
+			Leer numero_t
+			Repetir
+				Escribir "Digite cantidad de consignacion: "
+				Leer dinero
+			Hasta Que dinero>0
+			salir<-1
+		SiNo
+			si op es igual a "NO" Entonces
+				salir<-1
+			FinSi
+		FinSi
+	Hasta Que salir=1
 	escribir "La familia perez debe pagar: ",RL," de la luz "
 	escribir "La familia perez debe pagar: ",RG, " del gas "
 	escribir "La familia perez debe pagar: ",RA," del agua "
 	escribir "La familia perez debe pagar: ",PT, " de la telefonia "
-	
-	Escribir " El total de √° pagar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
+	eso<-X(RL,RG,RA,PT,C_arriendo)
+	Escribir " El total de · pagar con el arriendo incluido es de: ",eso,"$"
+	si op es igual a "SI" Entonces
+		Escribir "Se le consigno ",dinero,"$ al numero ",numero_t
+		
+		totalidad<-eso-dinero
+		si totalidad<=0 Entonces
+			Escribir "la deuda queda en: 0$"
+			Escribir "Sobrando un total de",totalidad
+		SiNo
+			si totalidad>0 Entonces
+				Escribir "la deuda queda en: ",totalidad,"$"
+			FinSi
+		FinSi
+		
+	FinSi
 	
 	
 FinAlgoritmo
-Funci√≥n pago1<-R_L ( R_luz )
+FunciÛn pago1<-R_L ( R_luz )
 pago1<-R_luz*0.4
 
-FinFunci√≥n
+FinFunciÛn
 
-Funci√≥n pago2<-R_G ( R_gas )
+FunciÛn pago2<-R_G ( R_gas )
 pago2<-R_gas*0.5
-FinFunci√≥n
-Funci√≥n pago3<-R_A ( R_agua )
+FinFunciÛn
+FunciÛn pago3<-R_A ( R_agua )
 pago3<-R_agua*0.5
-FinFunci√≥n
-Funci√≥n pago4<-P_T ( P_telefonia )
+FinFunciÛn
+FunciÛn pago4<-P_T ( P_telefonia )
 pago4<-P_telefonia*1
-FinFunci√≥n
-Funci√≥n Total_X<-X ( RL, RG, RA, PT, C_arriendo )
+FinFunciÛn
+FunciÛn Total_X<-X ( RL, RG, RA, PT, C_arriendo )
 Total_X<-RL+RG+RA+PT+C_arriendo
-FinFunci√≥n
+FinFunciÛn
