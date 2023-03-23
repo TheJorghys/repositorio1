@@ -9,15 +9,15 @@ Algoritmo ARRIENDO
 	
 	contrasena <- "12345"
 	
-	Escribir "Ingrese la contrase馻 para efectuar el pago : "
+	Escribir "Ingrese la contrase帽a para efectuar el pago : "
 	
 	Leer contra
 	
 	Si contrasena = contra Entonces
-		Escribir "Contrase馻 correcta. Ingresando al sistema..."
+		Escribir "Contrase帽a correcta. Ingresando al sistema..."
 		
 	Sino
-		Escribir "Contrase馻 incorrecta. Vuelva a intentarlo."
+		Escribir "Contrase帽a incorrecta. Vuelva a intentarlo."
 	Fin Si
 	
 	
@@ -32,7 +32,7 @@ Algoritmo ARRIENDO
 	leer R_agua
 	Escribir "El valor del recibo de telofonia es: "
 	leer P_telefonia
-	
+
 	RL<-R_L (R_luz)
 	RG<-R_G (R_gas)
 	RA<-R_A (R_agua)
@@ -42,24 +42,24 @@ Algoritmo ARRIENDO
 	escribir "La familia perez debe pagar: ",RA," del agua "
 	escribir "La familia perez debe pagar: ",PT, " de la telefonia "
 	
-	Escribir " El total de 醦agar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
+	Escribir " El total de 谩pagar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
 	
 	
 FinAlgoritmo
-Funci髇 pago1<-R_L ( R_luz )
+Funci贸n pago1<-R_L ( R_luz )
 pago1<-R_luz*0.4
 
-FinFunci髇
+FinFunci贸n
 
-Funci髇 pago2<-R_G ( R_gas )
+Funci贸n pago2<-R_G ( R_gas )
 pago2<-R_gas*0.5
-FinFunci髇
-Funci髇 pago3<-R_A ( R_agua )
+FinFunci贸n
+Funci贸n pago3<-R_A ( R_agua )
 pago3<-R_agua*0.5
-FinFunci髇
-Funci髇 pago4<-P_T ( P_telefonia )
+FinFunci贸n
+Funci贸n pago4<-P_T ( P_telefonia )
 pago4<-P_telefonia*1
-FinFunci髇
-Funci髇 Total_X<-X ( RL, RG, RA, PT, C_arriendo )
+FinFunci贸n
+Funci贸n Total_X<-X ( RL, RG, RA, PT, C_arriendo )
 Total_X<-RL+RG+RA+PT+C_arriendo
-FinFunci髇
+FinFunci贸n
