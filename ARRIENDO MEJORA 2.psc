@@ -64,7 +64,6 @@ Algoritmo ARRIENDO
 	
 	Escribir " El total de á pagar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
 	
-	
 FinAlgoritmo
 Función pago1<-R_L ( R_luz )
 pago1<-R_luz*0.4
