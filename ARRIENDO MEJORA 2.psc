@@ -9,26 +9,27 @@ Algoritmo ARRIENDO
 	
 	contrasena <- "12345"
 	
+	
 	Repetir
-		Escribir "Ingrese la contraseÃ±a para efectuar el pago : "
+		Escribir "Ingrese la contraseña para efectuar el pago : "
 		Leer contra
 		si contra=12345 Entonces
 			contra<-12345
 		SiNo
-			Escribir "ContraseÃ±a incorrecta. Vuelva a intentarlo."
+			Escribir "Contraseña incorrecta. Vuelva a intentarlo."
 		FinSi
 		
 	Hasta Que contra=12345
 	
 	Si contra=12345 Entonces
-		Escribir "ContraseÃ±a correcta. Ingresando al sistema..."
+		Escribir "Contraseña correcta. Ingresando al sistema..."
 		
 	Fin Si
 	
 	Escribir "Valor del arriendo es: "
 	leer C_arriendo
 	
-	Escribir  "Â¿QuÃ© recibo desea pagar? luz, agua, gas, telefonia"
+	Escribir  "¿Qué recibo desea pagar? luz, agua, gas, telefonia"
 	leer recibo
 	
 	si recibo es igual a "luz" entonces
@@ -61,23 +62,24 @@ Algoritmo ARRIENDO
 	escribir "La familia perez debe pagar: ",RA," del agua "
 	escribir "La familia perez debe pagar: ",PT, " de la telefonia "
 	
-	Escribir " El total de Ã¡ pagar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
+	Escribir " El total de á pagar con el arriendo incluido es de: " X(RL,RG,RA,PT,C_arriendo) "$" 
+	
 	
 FinAlgoritmo
-FunciÃ³n pago1<-R_L ( R_luz )
+Función pago1<-R_L ( R_luz )
 pago1<-R_luz*0.4
 
-FinFunciÃ³n
+FinFunción
 
-FunciÃ³n pago2<-R_G ( R_gas )
+Función pago2<-R_G ( R_gas )
 pago2<-R_gas*0.5
-FinFunciÃ³n
-FunciÃ³n pago3<-R_A ( R_agua )
+FinFunción
+Función pago3<-R_A ( R_agua )
 pago3<-R_agua*0.5
-FinFunciÃ³n
-FunciÃ³n pago4<-P_T ( P_telefonia )
+FinFunción
+Función pago4<-P_T ( P_telefonia )
 pago4<-P_telefonia*1
-FinFunciÃ³n
-FunciÃ³n Total_X<-X ( RL, RG, RA, PT, C_arriendo )
+FinFunción
+Función Total_X<-X ( RL, RG, RA, PT, C_arriendo )
 Total_X<-RL+RG+RA+PT+C_arriendo
-FinFunciÃ³n
+FinFunción
