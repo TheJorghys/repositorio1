@@ -9,7 +9,6 @@ Algoritmo ARRIENDO
 	
 	contrasena <- "12345"
 	
-	
 	Repetir
 		Escribir "Ingrese la contraseña para efectuar el pago : "
 		Leer contra
